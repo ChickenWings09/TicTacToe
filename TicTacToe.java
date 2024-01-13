@@ -12,6 +12,7 @@ public class TicTacToe {
         }
     
         displayBoard();
+
     }
 
     private static void displayBoard() {
@@ -32,17 +33,18 @@ public class TicTacToe {
 
     private static void makeMove() {
         Scanner inputMove = new Scanner(System.in);
-        int row;
-        int column;
-
-        while(isValidMove(row, column)) {
-            System.out.println(player+ " enter the row and column you want to place your piece in: ");
+        int row = -1;  // Initialize row and column with invalid values
+        int column = -1;
+    
+        while(!isValidMove(row, column)) {
+            System.out.println(player + " enter the row and column you want to place your piece in: ");
             row = inputMove.nextInt();
             column = inputMove.nextInt();
         }
-
+    
         board[row][column] = player;
     }
+        
 
     private static void switchCurrentPlayer() {
         if (player == 'X') {
