@@ -37,7 +37,7 @@ public class TicTacToe {
         int column = -1;
     
         while(!isValidMove(row, column)) {
-            System.out.println(player + " enter the row and column you want to place your piece in: ");
+            System.out.println(player + " enter the row and column you want to place your piece(row column): ");
             row = inputMove.nextInt();
             column = inputMove.nextInt();
         }
